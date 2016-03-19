@@ -1,6 +1,6 @@
 {
 	"name": "jstewmc/sequence",
-	"description": "An ordered PHP array",
+	"description": "An array of ordered segments",
 	"license": "MIT",
 	"keywords": ["PHP", "sequence", "segment", "array"],
 	"authors": [

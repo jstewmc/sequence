@@ -1,17 +1,15 @@
 # Sequence
-An ordered PHP array.
+An array of ordered segments.
 
 ```php
-$segment1 = new Segment(0);
-$segment2 = new Segment(1);
+namespace Jstewmc\Sequence;
 
-$sequence = new Sequence();
+$sequence = new Sequence([new Segment(0), new Segment(1)]);
 
-$sequence->append($segment1);
-$sequence->append($segment2);
+// echo the sequence's length
+echo $sequence->length() . "\n\n";
 
-echo $sequence->length() ."\n\n";
-
+// loop through the sequence's segments
 foreach ($sequence->getSegments() as $segment) {
     echo $segment->getIndex(); . "\n";
 }
@@ -34,10 +32,10 @@ You can instantiate a sequence _with_ or _without_ segments:
 namespace Jstewmc\Sequence;
 
 $a = new Sequence();
-$b = new Sequence([new Segment(0), new Segment(1));
+$b = new Sequence([new Segment(0), new Segment(1)]);
 ```
 
-You can append a segment with `append()`:
+You can append a segment to the end of the sequence with `append()`:
 
 ```php
 namespace Jstewmc\Sequence;
@@ -60,7 +58,7 @@ echo $sequence->length();  // prints 2
 $sequence->getSegments() === [$segment1, $segment2];  // returns true
 ```
 
-You can prepend a segment with `prepend()`:
+You can prepend a segment to the beginning of the sequence with `prepend()`:
 
 ```php
 namespace Jstewmc\Sequence;
@@ -107,7 +105,7 @@ $sequence->get(999);      // throws OutOfBOundsException
 
 ```
 
-You can pop a segment with `pop()`:
+You can pop a segment off the end of the sequence with `pop()`:
 
 ```php
 namespace Jstewmc\Sequence;
@@ -121,7 +119,7 @@ $sequence->pop($segment2);  // returns $segment2
 $sequence->length();        // returns 1
 ```
 
-You can shift a segment with `shift()`:
+You can shift a segment onto the beginning of the sequence with `shift()`:
 
 ```php
 namespace Jstewmc\Sequence;
