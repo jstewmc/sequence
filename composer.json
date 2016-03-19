@@ -1,0 +1,21 @@
+{
+	"name": "jstewmc/sequence",
+	"description": "An ordered PHP array",
+	"license": "MIT",
+	"keywords": ["PHP", "sequence", "segment", "array"],
+	"authors": [
+		{
+			"name": "Jack Clayton",
+			"email": "clayjs0@gmail.com"	
+		}
+	],
+	"require": {},
+	"require-dev": {
+		"phpunit/phpunit": "~4.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Jstewmc\\Sequence\\": "src/"
+		}
+	}
+}
